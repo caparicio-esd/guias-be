@@ -1,15 +1,23 @@
-import json
-
+from django.contrib.auth.models import User
 from django.test import TestCase
 from rest_framework.test import APIClient
 
-import scripts.populate_competencies
+from scripts import populate_chronogramblock
+from scripts import populate_contents
+from scripts import populate_resultados
+from scripts import populate_competencies
+from scripts import populate_guia
+
 
 # Create your tests here.
-class GuiasTests(TestCase):
+class GuiaTest(TestCase):
     def setUp(self):
-        # TODO set other scripts...
-        scripts.populate_competencies.run()
+        User.objects.create_superuser('admin', 'admin@admin', 'admin')
+        populate_competencies.run()
+        populate_chronogramblock.run()
+        populate_contents.run()
+        populate_resultados.run()
+        populate_guia.run()
         self.client = APIClient()
 
     def test_guia_url_exists(self):
@@ -36,7 +44,6 @@ class GuiasTests(TestCase):
         self.assertEqual(response.status_code, 405)
         response = self.client.delete("/competencias/1")
         self.assertEqual(response.status_code, 405)
-
 
     def test_get_guia_fields(self):
         pass

@@ -14,11 +14,14 @@ class Guia(models.Model):
     Guia model
     """
     # Generic data
-    title = models.CharField(max_length=500, null=True)
-    description = models.TextField(null=True)
-    course_code = models.CharField(max_length=300, null=True)
+    title = models.CharField(max_length=500, null=False, blank=False)
+    description = models.TextField(null=True, blank=False)
+    course_code = models.CharField(max_length=300, null=False, blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    published_at = models.DateTimeField(null=True)
+    year_code = models.IntegerField()
+    status = models.CharField(max_length=200, default="draft")
 
     # Identifiers
     identifier_type = models.CharField(max_length=200, null=True)
@@ -35,13 +38,13 @@ class Guia(models.Model):
     identifier_language = models.CharField(max_length=200, null=True)
 
     # User relation
-    coordinator = models.ForeignKey(User, on_delete=models.PROTECT, null=True, related_name='coordinator')
-    teachers = models.ManyToManyField(User)
+    coordinator = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True, related_name='coordinator')
+    teachers = models.ManyToManyField(User, blank=True)
 
     # Many-to-many relations
-    competencies = models.ManyToManyField(GuiaCompetencies)
-    results = models.ManyToManyField(GuiaResults)
-    contents = models.ManyToManyField(GuiaContents)
+    competencies = models.ManyToManyField(GuiaCompetencies, blank=True)
+    results = models.ManyToManyField(GuiaResults, blank=True)
+    contents = models.ManyToManyField(GuiaContents, blank=True)
 
     # Hours
     hours_activities = models.IntegerField(default=0)
@@ -73,10 +76,10 @@ class Guia(models.Model):
     calification_disabled_attitude = models.IntegerField(default=0)
 
     # Chronogram
-    chronogram = models.ForeignKey(GuiaChronogram, on_delete=models.CASCADE, null=True)
+    chronogram = models.ForeignKey(GuiaChronogram, on_delete=models.CASCADE, blank=True)
 
     # Resources
-    resources = models.ManyToManyField(GuiaResources, default=0)
+    resources = models.ManyToManyField(GuiaResources, blank=True)
 
     def __str__(self):
-        return self.title
+        return "Guia - {}".format(self.title)

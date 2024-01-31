@@ -11,6 +11,7 @@ def run():
     )
     Guia.objects.create(
         title=fake.words(nb=5),
+        year_code=2024,
         description="hola",
         identifier_type="test",
         identifier_character="test",
@@ -25,5 +26,5 @@ def run():
         identifier_prelation="test",
         identifier_language="test",
         coordinator=User.objects.get(id=1),
-        chronogram=GuiaChronogram.objects.get(id=4),
+        chronogram=GuiaChronogram.objects.get(id=1),
     )

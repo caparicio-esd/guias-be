@@ -1,7 +1,7 @@
 import json
 import pathlib
 
-from guias.models import GuiaCompetencias
+from guias.models import GuiaCompetencies
 
 
 def run():
@@ -12,21 +12,21 @@ def run():
     specific_competencies_path = '{}/data/specific_competencies.json'.format(cwd)
     mdi_competencies_path = '{}/data/mdi_competencies.json'.format(cwd)
     #
-    GuiaCompetencias.objects.all().delete()
+    GuiaCompetencies.objects.all().delete()
     #
     with open(transversal_competencies_path, 'r') as file:
         data = json.load(file)
         for competency in data:
-            GuiaCompetencias.objects.create(**competency)
+            GuiaCompetencies.objects.create(**competency)
     with open(general_competencies_path, 'r') as file:
         data = json.load(file)
         for competency in data:
-            GuiaCompetencias.objects.create(**competency)
+            GuiaCompetencies.objects.create(**competency)
     with open(specific_competencies_path, 'r') as file:
         data = json.load(file)
         for competency in data:
-            GuiaCompetencias.objects.create(**competency)
+            GuiaCompetencies.objects.create(**competency)
     with open(mdi_competencies_path, 'r') as file:
         data = json.load(file)
         for competency in data:
-            GuiaCompetencias.objects.create(**competency)
+            GuiaCompetencies.objects.create(**competency)

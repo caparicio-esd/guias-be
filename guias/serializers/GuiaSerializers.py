@@ -9,6 +9,12 @@ from guias.serializers.GuiaSpecialtiesSerializers import GuiaSpecialtySerializer
 from guias.serializers.UserSerializers import UserSerializerSmall
 
 
+class GuiaSerializerSmall(serializers.ModelSerializer):
+    class Meta:
+        model = Guia
+        fields = ["id", "title", "updated_at", "identifier_specialty"]
+
+
 class GuiaSerializerMain(serializers.ModelSerializer):
     coordinator = UserSerializerSmall()
     teachers = UserSerializerSmall(many=True)

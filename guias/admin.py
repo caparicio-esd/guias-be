@@ -1,10 +1,6 @@
 from django.contrib import admin
+from guias.models import *
 
-
-# TODO migrar a carpetitas
-from guias.models import Guia, GuiaCompetencies, GuiaSpecialty, GuiaContents, GuiaResults, GuiaResources
-
-# Register your models here.
 admin.site.register(Guia)
 admin.site.register(GuiaSpecialty)
 admin.site.register(GuiaCompetencies)
