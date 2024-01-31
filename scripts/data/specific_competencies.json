@@ -1,0 +1,495 @@
+[
+  {
+    "key": "CEG1",
+    "title": "Generar, desarrollar y materializar ideas, conceptos e imágenes para programas comunicativos complejos.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG2",
+    "title": "Dominar los recursos formales de la expresión y la comunicación visual.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG3",
+    "title": "Comprender y utilizar la capacidad de significación del lenguaje gráfico.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG4",
+    "title": "Dominar los procedimientos de creación de códigos comunicativos.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG5",
+    "title": "Establecer estructuras organizativas de la información.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG6",
+    "title": "Interrelacionar los lenguajes formal y simbólico con la funcionalidad específica.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG7",
+    "title": "Determinar y, en su caso, crear soluciones tipográficas adecuadas a los objetivos del proyecto",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG8",
+    "title": "Conocer los canales que sirven de soporte a la comunicación visual y utilizarlos conforme a los objetivos comunicacionales del proyecto.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG9",
+    "title": "Analizar el comportamiento de los receptores del proceso comunicacional en función de los objetivos del proyecto.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG10",
+    "title": "Aplicar métodos de verificación de la eficacia comunicativa.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG11",
+    "title": "Dominar los recursos tecnológicos de la comunicación visual.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG12",
+    "title": "Dominar la tecnología digital para el tratamiento de imágenes, textos y sonidos.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG13",
+    "title": "Conocer el contexto económico, social, cultural e histórico en el que se desarrolla el diseño gráfico.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG14",
+    "title": "Comprender el marco legal y reglamentario que regula la actividad profesional, la seguridad y salud laboral y la propiedad intelectual e industrial.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEG15",
+    "title": "Reflexionar sobre la influencia social positiva del diseño, valorar su incidencia en la mejora de la calidad de vida y del medio ambiente y su capacidad para generar identidad, innovación y calidad en la producción.",
+    "type": "specific",
+    "specialty": "grafico",
+    "description": ""
+  },
+  {
+    "key": "CEI1",
+    "title": "Generar y materializar soluciones funcionales, formales y técnicas que permitan el aprovechamiento y la utilización idónea de espacios interiores.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI2",
+    "title": "Concebir y desarrollar proyectos de diseño de interiores con criterios que comporten mejora en la calidad, uso y consumo de las producciones.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI3",
+    "title": "Dirigir y certificar la realización de proyectos de interiores.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI4",
+    "title": "Analizar, interpretar, adaptar y producir información relativa a la materialización de los proyectos.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI5",
+    "title": "Resolver los problemas estéticos, funcionales, técnicos y constructivos que se planteen durante el desarrollo y ejecución del proyecto.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI6",
+    "title": "Interrelacionar los lenguajes formal y simbólico con la funcionalidad específica.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI7",
+    "title": "Conocer las características, propiedades físicas y químicas y comportamiento de los materiales utilizados en el diseño de interiores.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI8",
+    "title": "Conocer los procesos de fabricación, producción y manufacturado más usuales de los diferentes sectores vinculados al diseño de interiores.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI9",
+    "title": "Adecuar la metodología y las propuestas a la evolución tecnológica e industrial propia del sector.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI10",
+    "title": "Conocer los recursos tecnológicos de la comunicación y sus aplicaciones al diseño de interiores.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI11",
+    "title": "Dominar la tecnología digital específica vinculada al desarrollo y ejecución de proyectos de interiorismo.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI12",
+    "title": "Conocer el contexto económico, social, cultural e histórico en el que se desarrolla el diseño de interiores.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI13",
+    "title": "Conocer el marco económico y organizativo en el que se desarrolla la actividad empresarial del interiorismo.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI14",
+    "title": "Comprender el marco legal y reglamentario que regula la actividad profesional, la seguridad y salud laboral y la propiedad intelectual e industrial.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEI15",
+    "title": "Reflexionar sobre la influencia social positiva del diseño, valorar su incidencia en la mejora de la calidad de vida y del medio ambiente y su capacidad para generar identidad, innovación y calidad en la producción.",
+    "type": "specific",
+    "specialty": "interiores",
+    "description": ""
+  },
+  {
+    "key": "CEM1",
+    "title": "Generar propuestas creativas de diseño de moda e indumentaria adecuadas a los condicionamientos materiales, funcionales, estéticos y comunicativos de los supuestos de trabajo.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM2",
+    "title": "Concebir y materializar proyectos de diseño de moda e indumentaria que integren los aspectos formales, materiales, técnicos, funcionales, comunicativos y de realización.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM3",
+    "title": "Conocer las características, propiedades y comportamiento de los materiales utilizados en los distintos ámbitos del diseño de moda e indumentaria.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM4",
+    "title": "Generar propuestas creativas de diseño de moda e indumentaria adecuadas a los condicionamientos materiales, funcionales, estéticos y comunicativos de los supuestos de trabajo.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM5",
+    "title": "Conocer la maquinaria y los procesos de fabricación, producción y manufacturado de los sectores vinculados al diseño de moda e indumentaria.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM6",
+    "title": "Adecuar la metodología y las propuestas de diseño a la evolución tecnológica e industrial propia del sector.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM7",
+    "title": "Fundamentar el proceso creativo en estrategias de investigación, metodológicas y estéticas.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM8",
+    "title": "Interrelacionar los lenguajes formal y simbólico con la funcionalidad específica.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM9",
+    "title": "Resolver los problemas estéticos, funcionales, técnicos y de realización que se planteen durante el desarrollo y ejecución del proyecto.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM10",
+    "title": "Analizar los estudios de mercado y su incidencia en el desarrollo de nuevos productos y colecciones.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM11",
+    "title": "Conocer los recursos tecnológicos de la comunicación y sus aplicaciones al diseño de moda e indumentaria.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM12",
+    "title": "Dominar la tecnología digital específica vinculada al desarrollo y ejecución de proyectos de diseño de moda e indumentaria.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM13",
+    "title": "Conocer el marco económico y organizativo en el que se desarrolla la actividad empresarial.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM14",
+    "title": "Conocer el contexto económico, social, cultural e histórico en el que se desarrolla el diseño de moda e indumentaria.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM15",
+    "title": "Comprender el marco legal y reglamentario que regula la actividad profesional, la seguridad y salud laboral y la propiedad intelectual e industrial.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEM16",
+    "title": "Reflexionar sobre la influencia social positiva del diseño, su incidencia en la mejora de la calidad de vida y del medio ambiente y su capacidad para generar identidad, innovación y calidad en la producción.",
+    "type": "specific",
+    "specialty": "moda",
+    "description": ""
+  },
+  {
+    "key": "CEP1",
+    "title": "Determinar las características finales de productos, servicios y sistemas, coherentes con los requisitos y relaciones estructurales, organizativas, funcionales, expresivas y económicas definidas en el proyecto.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP2",
+    "title": "Resolver problemas proyectuales mediante la metodología, destrezas, y procedimientos adecuados.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP3",
+    "title": "Proponer, evaluar y determinar soluciones alternativas a problemas complejos de diseño de productos y sistemas.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP4",
+    "title": "Reflexionar sobre la influencia social positiva del diseño, su incidencia en la mejora de la calidad de vida y del medio ambiente y su capacidad para generar identidad, innovación y calidad en la producción.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP5",
+    "title": "Valorar e integrar la dimensión estética en relación al uso y funcionalidad del producto.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP6",
+    "title": "Analizar modelos y sistemas naturales y sus aplicaciones en el diseño de productos y sistemas.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP7",
+    "title": "Determinar las soluciones constructivas, los materiales y los principios de producción adecuados en cada caso.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP8",
+    "title": "Conocer las características, propiedades físicas y químicas y comportamiento de los materiales utilizados en el diseño de productos, servicios y sistemas.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP9",
+    "title": "Conocer los procesos para la producción y desarrollo de productos, servicios y sistemas.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP10",
+    "title": "Dominar los recursos gráfico-plásticos de la representación bi y tridimensional.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP11",
+    "title": "Producir y comunicar la información adecuada relativa a la producción.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP12",
+    "title": "Conocer los recursos tecnológicos de la comunicación y sus aplicaciones al diseño de producto.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP13",
+    "title": "Dominar la tecnología digital específica vinculada al desarrollo y ejecución de proyectos de diseño de producto.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP14",
+    "title": "Conocer el contexto económico, social, cultural e histórico en el que se desarrolla el diseño de producto.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP15",
+    "title": "Comprender el marco legal y reglamentario que regula la actividad profesional, la seguridad y salud laboral y la propiedad intelectual e industrial.",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  },
+  {
+    "key": "CEP16",
+    "title": "Reflexionar sobre la influencia social positiva del diseño, su incidencia en la mejora de la calidad de vida y del medio ambiente y su capacidad para generar identidad, innovación y calidad en la producción",
+    "type": "specific",
+    "specialty": "producto",
+    "description": ""
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+[
+  {
+    "title": "Arquitectura Cliente - Servidor",
+    "parent": 0,
+    "priority": 0,
+    "children": [
+      {
+        "title": "¿Qué es un servidor? - Introducción a la asignatura",
+        "parent": 0,
+        "priority": 0
+      }
+    ]
+  },
+  {
+    "title": "PHP",
+    "parent": 0,
+    "priority": 0,
+    "children": [
+      {
+        "title": "PHP - Fundamentos del lenguaje",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Interacción con el servidor Apache",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Estructuras complejas e integración con HTML",
+        "parent": 0,
+        "priority": 0
+      }
+    ]
+  },
+  {
+    "title": "MySQL",
+    "parent": 0,
+    "priority": 0,
+    "children": [
+      {
+        "title": "MySQL. Introducción a bases de datos",
+        "parent": 0,
+        "priority": 0
+      }
+    ]
+  },
+  {
+    "title": "Wordpress",
+    "parent": 0,
+    "priority": 0,
+    "children": [
+      {
+        "title": "Instalación Wordpress y Entorno de administración WP",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Template básico",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Jerarquía de plantillas",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Funciones de Wordpress y template parts",
+        "parent": 0,
+        "priority": 0
+      }
+    ]
+  },
+  {
+    "title": "Wordpress avanzado",
+    "parent": 0,
+    "priority": 0,
+    "children": [
+      {
+        "title": "Tipos de contenido y taxonomías. CPT",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Tipos de campo. Renderizando Campos meta",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Custom loops. Libertad absoluta en Wordpress",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Uso de algunos plugins",
+        "parent": 0,
+        "priority": 0
+      }
+    ]
+  },
+  {
+    "title": "WP-Rest",
+    "parent": 0,
+    "priority": 0,
+    "children": [
+      {
+        "title": "Uso de la REST-API de Wordpress",
+        "parent": 0,
+        "priority": 0
+      },
+      {
+        "title": "Despliegue de una aplicación de Wordpres",
+        "parent": 0,
+        "priority": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "key": "CEMDI1",
+    "title": "Conocer y manejar conceptos avanzados relativos al diseño interactivo que permitan reconocer problemas y oportunidades en el análisis y la ejecución de proyectos en todo tipo de organizaciones e instituciones",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI10",
+    "title": "Comprender los valores de igualdad y sostenibilidad, así como la apreciación de los significados culturales de las tecnologías de la información y la comunicación a la hora de la realización de proyectos avanzados de diseño interactivo",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI2",
+    "title": "Realizar proyectos de diseño interactivo apropiados a los condicionantes comunicativos, tecnológicos y capaces de atender a los requerimientos de accesibilidad a la información",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI3",
+    "title": "Adquirir un conocimiento profundo de los distintos procesos de comunicación interactiva, las tecnologías y los recursos necesarios para implementar, gestionar y potenciar proyectos avanzados",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI4",
+    "title": "Dominar las herramientas de gestión y presentación de proyectos y utilizar lenguajes para investigar, analizar, interpretar y articular ideas e información",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI5",
+    "title": "Aportar valor mediante la creatividad y la participación dentro de un equipo multidisciplinar y desarrollar las habilidades directivas para ejercer responsabilidades en proyectos avanzados de diseño interactivo",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI6",
+    "title": "Adquirir un conocimiento integral del contexto social y organizativo en que se desarrollan los proyectos avanzados de diseño interactivo y dar una respuesta a las necesidades y demandas profesionales, organizativas y sociales, modificando e Introducie",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI7",
+    "title": "Desarrollar un pensamiento estratégico de la comunicación que permita definir problemas, diagnosticar y estructurar objetivos de análisis y de acción en los campos del diseño interactio",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI8",
+    "title": "Desarrollar metodologías de investigación avanzadas en el ámbito del diseño interactivo que permitan una utilización innovadora de las tecnologías aplicables al diseño y a la comunicación",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CEMDI9",
+    "title": "Producir estudios económicos completos para proyectos avanzados de diseño interactivo que respondan a los requerimientos de la práctica profesional",
+    "type": "specific",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI1",
+    "title": "Poseer y comprender conocimientos que aporten una base u oportunidad de ser originales en el desarrollo y en la aplicación de ideas, a menudo en un contexto de investigación",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI2",
+    "title": "Aplicar los conocimientos adquiridos y su capacidad de resolución de problemas en entornos nuevos o poco conocidos dentro de contextos más amplios (o multidisciplinares) relacionados con su área de estudio",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI3",
+    "title": "Integrar conocimientos y enfrentarse a la complejidad de formular juicios a partir de una información que, siendo incompleta o limitada, incluya reflexiones sobre las responsabilidades sociales y éticas vinculadas a la aplicación de sus conocimientos",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI4",
+    "title": "Comunicar sus conclusiones, y los conocimientos y razones últimas que las sustentan, a públicos especializados y no especializados de un modo claro y sin ambigüedades",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI5",
+    "title": "Poseer las habilidades de aprendizaje que les permitan continuar estudiando de un modo que habrá de ser en gran medida autodirigido o autónomo",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI6",
+    "title": "Adquirir conocimientos avanzados en un contexto de investigación científica y tecnológica altamente especializada, una comprensión detallada y fundamentada de los aspectos teóricos y prácticos y de la metodología de trabajo en uno o más campos de estu",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  },
+  {
+    "key": "CGMDI7",
+    "title": "Reconocer la necesidad del cambio y tener las habilidades para actuar de forma independiente, anticipar y adaptarse a las transformaciones en contextos de ambigüedad e incertidumbre",
+    "type": "general",
+    "specialty": "mdi",
+    "description": ""
+  }
+]

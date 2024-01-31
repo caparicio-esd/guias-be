@@ -1,0 +1,8 @@
+---
+import Home from "../layouts/Home.astro";
+const guias = await fetch("http://localhost:8000/guias").then(d => d.json())
+---
+
+<Home>
+{guias.map(guia => (<div>{guia.title}</div>))}
+</Home>

@@ -1,0 +1,13 @@
+---
+import Home from "../../../layouts/Home.astro";
+export const getStaticPaths = async () => [{ params: { guia_id: 1 } }];
+const { guia_id } = Astro.params;
+const guia = await fetch("http://localhost:8000/guias/" + guia_id).then((d) =>
+  d.json()
+);
+---
+
+<Home>
+  <h3>edition</h3>
+  <div>{guia.title}</div>
+</Home>

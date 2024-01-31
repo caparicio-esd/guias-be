@@ -1,0 +1,18 @@
+---
+import Home from "../../layouts/Home.astro";
+import { Button } from "@/components/ui/button";
+const guias = await fetch("http://localhost:8000/guias").then((d) => d.json());
+---
+
+<Home>
+  {
+    guias.map((guia) => (
+      <div class="guia">
+        <h2>Title: {guia.title}</h2>
+        <Button>
+          <a href={`/guias/${guia.id}`}>Goto {guia.id}</a>
+        </Button>
+      </div>
+    ))
+  }
+</Home>
