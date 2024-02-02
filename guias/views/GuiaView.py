@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from guias.models import Guia
-from guias.serializers.GuiaSerializers import GuiaSerializerMain, GuiaSerializerSmall
+from guias.serializers.GuiaSerializers import GuiaSerializerMain, GuiaSerializerSmall, GuiaSerializerMainPost
 
 
 class GuiaListView(APIView):
@@ -15,7 +15,7 @@ class GuiaListView(APIView):
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = GuiaSerializerMain(data=request.data)
+        serializer = GuiaSerializerMainPost(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -36,8 +36,17 @@ class GuiaSingleView(APIView):
         return Response(serializer.data)
 
     def put(self, request: Request, guia_id):
-        serializer = GuiaSerializerMain(self._get_guia(guia_id), data=request.data)
+        serializer = GuiaSerializerMainPost(self._get_guia(guia_id), data=request.data)
         if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def patch(self, request: Request, guia_id):
+        serializer = GuiaSerializerMainPost(self._get_guia(guia_id), data=request.data, partial=True)
+        if serializer.is_valid():
+            print(request.data)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
         else:

@@ -15,6 +15,12 @@ class GuiaSerializerSmall(serializers.ModelSerializer):
         fields = ["id", "title", "updated_at", "identifier_specialty"]
 
 
+class GuiaSerializerMainPost(serializers.ModelSerializer):
+    class Meta:
+        model = Guia
+        fields = "__all__"
+
+
 class GuiaSerializerMain(serializers.ModelSerializer):
     coordinator = UserSerializerSmall()
     teachers = UserSerializerSmall(many=True)
