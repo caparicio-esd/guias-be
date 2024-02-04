@@ -1,13 +1,147 @@
 ---
+import type { GuiaGet } from "@/env";
+import { Formik, Field, Form } from "formik";
 import Home from "../../../layouts/Home.astro";
+import type { Code, Debug } from "astro:components";
 export const getStaticPaths = async () => [{ params: { guia_id: 1 } }];
 const { guia_id } = Astro.params;
-const guia = await fetch("http://localhost:8000/guias/" + guia_id).then((d) =>
-  d.json()
-);
+const guia: GuiaGet = await fetch(
+  "http://localhost:8000/guias/" + guia_id
+).then((d) => d.json());
+
+type GuiaFormPostData = {
+  identifier_type: String;
+};
+const formValues: GuiaFormPostData = {
+  identifier_type: "a",
+};
+const processForm = (values: GuiaFormPostData) => {
+  console.log(values);
+};
 ---
 
 <Home>
-  <h3>edition</h3>
-  <div>{guia.title}</div>
+  <Formik initialValues={formValues} onSubmit={processForm}>
+    {
+      (props) => (
+        <Form>
+          <div class="flex min-h-screen">
+            <div class="aside w-52 bg-slate-100 sticky top-0 left-0 p-4">
+              aside
+            </div>
+            <div class="main flex-1 p-4 flex flex-col gap-2">
+              <h1 class="title text-2xl font-bold">{guia.title}</h1>
+              <div class="description">{guia.description}</div>
+              <hr />
+              <div class="block">
+                <h2 class="text-xl font-bold my-4">
+                  1. Identificadores de la asignatura
+                </h2>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">Tipo</div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.type}
+                    <Field {...getFieldProps("identifier_type")} />
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Caracter
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.character}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Especialidad
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.specialty.title}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">Materia</div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.subject}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">Curso</div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.course}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Semestre
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.semester}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Créditos
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.credits}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Horas presenciales
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.hours_presence}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Department
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.department}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">
+                    Prelación
+                  </div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.prelation}
+                  </div>
+                </div>
+                <div class="identifier_type flex gap-2 border-b border-b-gray-200 mb-1 pb-2">
+                  <div class="identifier_label min-w-40 font-bold">Idioma</div>
+                  <div class="identifier_value flex-1">
+                    {guia.identifiers.language}
+                  </div>
+                </div>
+              </div>
+              <div class="block">
+                <h2 class="text-xl font-bold my-4">
+                  2. Profesor responsable de la asignatura
+                </h2>
+                {guia.coordinator && (
+                  <div class="teacher">
+                    <div class="teacher_pic w-7 h-7 rounded-full bg-slate-200" />
+                    <div class="teacher_content">
+                      {guia.coordinator.username}
+                    </div>
+                  </div>
+                )}
+                {guia.teachers.map((teacher) => (
+                  <div class="teacher">
+                    <div class="teacher_pic w-7 h-7 rounded-full bg-slate-200" />
+                    <div class="teacher_content">{teacher.username}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Form>
+      )
+    }
+  </Formik>
 </Home>

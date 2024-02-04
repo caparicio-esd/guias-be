@@ -8,7 +8,7 @@ from guias.models import Guia
 from guias.serializers.GuiaSerializers import GuiaSerializerMain, GuiaSerializerSmall, GuiaSerializerMainPost
 
 
-class GuiaListView(APIView):
+class GuiaViewList(APIView):
     def get(self, request):
         guias = Guia.objects.all()
         serializer = GuiaSerializerSmall(guias, many=True)
@@ -23,7 +23,7 @@ class GuiaListView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class GuiaSingleView(APIView):
+class GuiaViewSingle(APIView):
     def _get_guia(self, guia_id):
         try:
             guia = Guia.objects.get(id=guia_id)
@@ -46,7 +46,6 @@ class GuiaSingleView(APIView):
     def patch(self, request: Request, guia_id):
         serializer = GuiaSerializerMainPost(self._get_guia(guia_id), data=request.data, partial=True)
         if serializer.is_valid():
-            print(request.data)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
         else:

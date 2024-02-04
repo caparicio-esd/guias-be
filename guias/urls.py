@@ -3,15 +3,21 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from .views import *
 
 urlpatterns = [
-    path("", GuiaListView.as_view(), name="guia_list"),
-    path("guias", GuiaListView.as_view(), name="guia_list"),
-    path("guias/<int:guia_id>", GuiaSingleView.as_view(), name="guia_single"),
-    path("results/<int:pk>", GuiaResultsView.as_view(), name="guia_results"),
-    path("resources/<int:pk>", GuiaResourcesView.as_view(), name="guia_results"),
+    path("", GuiaViewList.as_view(), name="guia_list"),
     path("chronogram/<int:pk>", GuiaChronogramView.as_view(), name="chronogram_single"),
-    path("competencias", GuiaCompetenciasView.as_view(), name="competencias"),
-    path("competencias/<int:id>", GuiaCompetenciasSingleView.as_view(), name="competencias_single"),
-    path("competencias/<str:key>", GuiaCompetenciasSingleViewByKey.as_view(), name="competencias_single_by_key"),
-    re_path(r'^competencias/list/(?P<ids>[0-9,]+)/?$', GuiaCompetenciasListView.as_view(), name="competencias_list"),
+    path("contents/", GuiaContentsViewList.as_view(), name="contents"),
+    path("contents/<int:pk>/", GuiaContentsViewSingle.as_view(), name="contents_single"),
+    path("competencies/", GuiaCompetenciasView.as_view(), name="competencias"),
+    path("competencies/<int:id>/", GuiaCompetenciasSingleView.as_view(), name="competencias_single"),
+    path("competencies/<str:key>/", GuiaCompetenciasSingleViewByKey.as_view(), name="competencias_single_by_key"),
+    re_path(r'^competencies/list/(?P<ids>[0-9,]+)/?$', GuiaCompetenciasListView.as_view(), name="competencias_list"),
+    path("guias", GuiaViewList.as_view(), name="guia_list"),
+    path("guias/<int:guia_id>", GuiaViewSingle.as_view(), name="guia_single"),
+    path("resources/", GuiaResourcesViewList.as_view(), name="resources_list"),
+    path("resources/<int:pk>/", GuiaResourcesViewSingle.as_view(), name="resources_single"),
+    path("results/", GuiaResultsViewList.as_view(), name="results"),
+    path("results/<int:pk>/", GuiaResultsViewSingle.as_view(), name="results_single"),
+    path("specialties/", GuiaSpecialtiesViewList.as_view(), name="specialties_list"),
+    path("specialties/<int:pk>/", GuiaSpecialtiesViewSingle.as_view(), name="specialties_single"),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

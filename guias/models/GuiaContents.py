@@ -10,4 +10,4 @@ class GuiaContents(models.Model):
     parent = models.ForeignKey("self", on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return "GuiaContents - {} - {}".format(self.parent.title, self.title)
+        return "GuiaContents - {} - {}".format(self.parent.title if self.parent else "", self.title)

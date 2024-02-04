@@ -4,7 +4,7 @@ from guias.models import GuiaResources
 from guias.serializers import GuiaResourcesSerializerMain
 
 
-class GuiaResourcesView(generics.RetrieveAPIView):
+class GuiaResourcesViewList(generics.ListCreateAPIView):
     """
     GuiaResourcesView
     With RetrieveAPIView only GET requests are allowed with a id
@@ -12,3 +12,11 @@ class GuiaResourcesView(generics.RetrieveAPIView):
     queryset = GuiaResources.objects.all()
     serializer_class = GuiaResourcesSerializerMain
 
+
+class GuiaResourcesViewSingle(generics.RetrieveUpdateDestroyAPIView):
+    """
+    GuiaResourcesView
+    With RetrieveAPIView only GET requests are allowed with a id
+    """
+    queryset = GuiaResources.objects.all()
+    serializer_class = GuiaResourcesSerializerMain

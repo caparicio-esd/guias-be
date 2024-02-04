@@ -4,11 +4,21 @@ from guias.models import GuiaResults
 from guias.serializers.GuiaResultsSerializers import GuiaResultsSerializerMain
 
 
-class GuiaResultsView(generics.RetrieveAPIView):
+class GuiaResultsViewSingle(generics.RetrieveUpdateDestroyAPIView):
     """
-    GuiaResultsView
-    With RetrieveAPIView only GET requests are allowed with a id
+    GuiaResultsViewSingle
+    With RetrieveUpdateDestroyAPIView GET, DELETE and PUT methods are allowed with id
     """
     queryset = GuiaResults.objects.all()
     serializer_class = GuiaResultsSerializerMain
+
+
+class GuiaResultsViewList(generics.ListCreateAPIView):
+    """
+    GuiaResultsView
+    With ListCreateAPIView only GET and POSTS requests are allowed
+    """
+    queryset = GuiaResults.objects.all()
+    serializer_class = GuiaResultsSerializerMain
+
 
