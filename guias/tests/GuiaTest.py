@@ -5,7 +5,7 @@ from rest_framework.test import APIClient
 
 from scripts import populate_chronogramblock
 from scripts import populate_contents
-from scripts import populate_resultados
+from scripts import populate_results
 from scripts import populate_competencies
 from scripts import populate_guia
 
@@ -13,11 +13,6 @@ from scripts import populate_guia
 # Create your tests here.
 class GuiaTest(TestCase):
     def setUp(self):
-        User.objects.create_superuser('admin', 'admin@admin', 'admin')
-        populate_competencies.run()
-        populate_chronogramblock.run()
-        populate_contents.run()
-        populate_resultados.run()
         populate_guia.run()
         self.client = APIClient()
 

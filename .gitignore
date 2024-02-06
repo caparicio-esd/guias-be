@@ -1,4 +1,7 @@
 .idea
+frontend/.metals
+frontend/.lsp
+frontend/.clj-kondo
 .env
 venv
 db.sqlite3

@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Dominando Wordpress sin programación",
+    "description": "",
+    "author": "Francisco Aguilera",
+    "editorial": "AMK pro",
+    "href": "https://pro.franciscoamk.com",
+    "type": "1",
+    "year": null
+  },
+  {
+    "title": "Wordpress desde 0",
+    "description": "",
+    "author": "Jonathan MirCha",
+    "editorial": "Edteam",
+    "href": "",
+    "type": "1",
+    "year": null
+  },
+  {
+    "title": "Wordpress. Diseño y desarrollo",
+    "description": "",
+    "author": "BRAD & DAMSTRA",
+    "editorial": "Anaya Multimedia",
+    "href": "",
+    "type": "2",
+    "year": 2016
+  },
+  {
+    "title": "Wordpress 4.0. La tela de la araña",
+    "description": "",
+    "author": "SÁNCHEZ & TELLADO",
+    "editorial": "Anaya Multimedia",
+    "href": "",
+    "type": "2",
+    "year": 2014
+  },
+    {
+    "title": "Code",
+    "description": "",
+    "author": "",
+    "editorial": "",
+    "href": "http://codex.wordpress.org/es:Main_Page",
+    "type": "3",
+    "year": null
+  }
+]

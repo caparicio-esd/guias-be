@@ -5,7 +5,7 @@ from guias.models import GuiaCompetencies
 from guias.serializers.GuiaCompetenciesSerializers import GuiaCompetenciesSerializerMain
 
 
-class GuiaCompetenciasView(generics.ListAPIView):
+class GuiaCompetenciasView(generics.ListCreateAPIView):
     """
     GuiaCompetenciasView
     View for listing GuiaCompetencias model
@@ -34,7 +34,7 @@ class GuiaCompetenciasListView(generics.ListAPIView):
         return JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
 
-class GuiaCompetenciasSingleView(generics.RetrieveAPIView):
+class GuiaCompetenciasSingleView(generics.RetrieveUpdateDestroyAPIView):
     """
     GuiaCompetenciasSingleView
     View for retrieving a single GuiaCompetencia model by id

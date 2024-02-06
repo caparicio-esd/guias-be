@@ -4,7 +4,6 @@ import pathlib
 from guias.models import GuiaChronogramBlocks, GuiaChronogram
 
 
-# TODO improve block - theme relation
 def run():
     cwd = pathlib.Path(__file__).parent.resolve()
     chronogram_path = '{}/data/guia_chronogram.json'.format(cwd)

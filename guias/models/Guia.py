@@ -26,7 +26,7 @@ class Guia(models.Model):
     # Identifiers
     identifier_type = models.CharField(max_length=200, null=True)
     identifier_character = models.CharField(max_length=200, null=True)
-    identifier_specialty = models.ForeignKey(GuiaSpecialty, on_delete=models.CASCADE, null=True)
+    identifier_specialty = models.ForeignKey(GuiaSpecialty, on_delete=models.PROTECT)
     identifier_subject = models.CharField(max_length=200, null=True)
     identifier_course = models.CharField(max_length=200, null=True)
     identifier_semester = models.CharField(max_length=2, null=True)
@@ -76,7 +76,7 @@ class Guia(models.Model):
     calification_disabled_attitude = models.IntegerField(default=0)
 
     # Chronogram
-    chronogram = models.ForeignKey(GuiaChronogram, on_delete=models.CASCADE, blank=True)
+    chronogram = models.ForeignKey(GuiaChronogram, on_delete=models.CASCADE, null=True, blank=True)
 
     # Resources
     resources = models.ManyToManyField(GuiaResources, blank=True)
