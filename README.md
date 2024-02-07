@@ -1,9 +1,12 @@
 # Guias project
 
-### Developement
+### Development
+The project is based in Django with DRF and Astro. Checkout the official documentation
+
 For dev purpose python virtual environments are being used.
 ```bash
 $ python -m venv ./venv # or python3 if it's the case
+$ source ./venv/bin/activate
 ```
 Install requirements
 ```bash
