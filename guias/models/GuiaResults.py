@@ -6,7 +6,7 @@ class GuiaResults(models.Model):
     GuiaResults model
     """
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(null=True, default="")
     priority = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
