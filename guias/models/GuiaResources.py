@@ -10,7 +10,7 @@ class GuiaResources(models.Model):
     author = models.CharField(max_length=200, null=True)
     editorial = models.CharField(max_length=200, null=True)
     href = models.CharField(max_length=200, null=True)
-    type = models.CharField(max_length=200, default="a")
+    type = models.IntegerField()
     year = models.IntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

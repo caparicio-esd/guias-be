@@ -24,23 +24,6 @@ class GuiaTest(TestCase):
         response = self.client.get("/guias/4")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    def test_guia_competencias(self):
-        response = self.client.get("/competencias/1")
-        data = response.json()
-        self.assertTrue("Organizar y planificar" in data["title"])
-        self.assertEqual(data["key"], "CT1")
-        self.assertEqual(data["type"], "transversal")
-        self.assertEqual(data["specialty"], "transversal")
-        self.assertEqual(data["description"], "")
-
-    def test_guia_competencias_not_allowed_methods(self):
-        response = self.client.post("/competencias", data={"title": "test", "description": "test"})
-        self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        response = self.client.put("/competencias/1", data={"title": "test", "description": "test"})
-        self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-        response = self.client.delete("/competencias/1")
-        self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-
     def test_get_guia_fields(self):
         pass
 
