@@ -53,4 +53,4 @@ class GuiaViewSingle(APIView):
 
     def delete(self, request, guia_id):
         self._get_guia(guia_id).delete()
-        return Response(status=status.HTTP_202_ACCEPTED)
+        return Response(status=status.HTTP_204_NO_CONTENT)

@@ -68,7 +68,6 @@ class GuiaContentsTest(TestCase):
         request_data = {"priority": 3}
         response = self.client.patch("/contents/4/", data=request_data)
         data = response.json()
-        print(data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 4)
         self.assertEqual(data["priority"], 3)

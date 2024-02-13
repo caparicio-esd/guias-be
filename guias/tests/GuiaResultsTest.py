@@ -2,12 +2,14 @@ from django.test import TestCase
 from rest_framework import status
 from rest_framework.test import APIClient
 
+from guias.models import GuiaResults
 from scripts import populate_results
 
 
 class GuiaResultsTest(TestCase):
     def setUp(self):
-        populate_results.run()
+        if GuiaResults.objects.count() is 0:
+            populate_results.run()
         self.client = APIClient()
 
     def test_get_endpoints(self):

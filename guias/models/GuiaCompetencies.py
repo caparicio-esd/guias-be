@@ -5,11 +5,11 @@ class GuiaCompetencies(models.Model):
     """
     GuiaCompetencies model
     """
-    key = models.CharField(max_length=20)
+    key = models.CharField(max_length=20, unique=True)
     title = models.CharField(max_length=200)
     type = models.CharField(max_length=20)
-    specialty = models.CharField(max_length=20, null=True)
-    description = models.TextField()
+    specialty = models.CharField(max_length=20)
+    description = models.TextField(default="", blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

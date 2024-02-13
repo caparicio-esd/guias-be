@@ -3,12 +3,14 @@ from django.test import TestCase
 from rest_framework import status
 from rest_framework.test import APIClient
 
+from guias.models import GuiaSpecialty
 from scripts import populate_specialties
 
 
 class GuiaSpecialtiesTest(TestCase):
     def setUp(self):
-        populate_specialties.run()
+        if GuiaSpecialty.objects.count() is 0:
+            populate_specialties.run()
         self.client = APIClient()
 
     def test_get_endpoints(self):

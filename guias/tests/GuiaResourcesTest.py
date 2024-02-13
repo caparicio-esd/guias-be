@@ -60,7 +60,6 @@ class GuiaResourcesTest(TestCase):
         request_data = {"title": "Diseño Test Changed", "description": "Test Changed"}
         response = self.client.put("/resources/4/", data=request_data)
         data = response.json()
-        print(data)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(data["type"],  ['This field is required.'])
 
