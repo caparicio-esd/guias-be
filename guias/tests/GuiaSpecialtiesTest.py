@@ -15,13 +15,13 @@ class GuiaSpecialtiesTest(TestCase):
 
     def test_get_endpoints(self):
         #
-        response = self.client.get("/specialties/")
+        response = self.client.get("/api/v1/specialties/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), list)
         self.assertEqual(len(data), 4)
         #
-        response = self.client.get("/specialties/1/")
+        response = self.client.get("/api/v1/specialties/1/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), dict)
@@ -30,7 +30,7 @@ class GuiaSpecialtiesTest(TestCase):
 
     def test_post_endpoints(self):
         request_data = {"title": "Diseño Test", "description": "Test"}
-        response = self.client.post("/specialties/", data=request_data)
+        response = self.client.post("/api/v1/specialties/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(type(data), dict)
@@ -40,7 +40,7 @@ class GuiaSpecialtiesTest(TestCase):
 
     def test_put_endpoints(self):
         request_data = {"title": "Diseño Test Changed", "description": "Test Changed"}
-        response = self.client.put("/specialties/4/", data=request_data)
+        response = self.client.put("/api/v1/specialties/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 4)
@@ -49,17 +49,17 @@ class GuiaSpecialtiesTest(TestCase):
 
     def test_patch_endpoints(self):
         request_data = {"title": "Diseño Test Changed partially"}
-        response = self.client.put("/specialties/4/", data=request_data)
+        response = self.client.put("/api/v1/specialties/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["description"], "Blabla")
 
     def test_delete_endpoints(self):
         #
-        response = self.client.delete("/specialties/1/")
+        response = self.client.delete("/api/v1/specialties/1/")
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         #
-        response = self.client.get("/specialties/1/")
+        response = self.client.get("/api/v1/specialties/1/")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def tearDown(self):

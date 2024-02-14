@@ -14,13 +14,13 @@ class GuiaContentsTest(TestCase):
 
     def test_get_endpoints(self):
         #
-        response = self.client.get("/contents/")
+        response = self.client.get("/api/v1/contents/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), list)
         self.assertEqual(len(data), 21)
         #
-        response = self.client.get("/contents/1/")
+        response = self.client.get("/api/v1/contents/1/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), dict)
@@ -28,7 +28,7 @@ class GuiaContentsTest(TestCase):
         self.assertEqual(data["priority"], 0)
         self.assertEqual(data["parent"], None)
         #
-        response = self.client.get("/contents/2/")
+        response = self.client.get("/api/v1/contents/2/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), dict)
@@ -39,7 +39,7 @@ class GuiaContentsTest(TestCase):
     def test_post_endpoints(self):
         #
         request_data = {"title": "Diseño Test", "priority": 1, "parent": 1}
-        response = self.client.post("/contents/", data=request_data)
+        response = self.client.post("/api/v1/contents/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(type(data), dict)
@@ -49,14 +49,14 @@ class GuiaContentsTest(TestCase):
         self.assertEqual(data["parent"], 1)
         #
         request_data = {"title": "Diseño Test", "priority": 1, "parent": 100}
-        response = self.client.post("/contents/", data=request_data)
+        response = self.client.post("/api/v1/contents/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(data["parent"], ['Invalid pk "100" - object does not exist.'])
 
     def test_put_endpoints(self):
         request_data = {"title": "Diseño Test Changed", "priority": 2, "parent": 1}
-        response = self.client.put("/contents/4/", data=request_data)
+        response = self.client.put("/api/v1/contents/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 4)
@@ -66,7 +66,7 @@ class GuiaContentsTest(TestCase):
 
     def test_patch_endpoints(self):
         request_data = {"priority": 3}
-        response = self.client.patch("/contents/4/", data=request_data)
+        response = self.client.patch("/api/v1/contents/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 4)
@@ -75,10 +75,10 @@ class GuiaContentsTest(TestCase):
 
     def test_delete_endpoints(self):
         #
-        response = self.client.delete("/contents/1/")
+        response = self.client.delete("/api/v1/contents/1/")
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         #
-        response = self.client.get("/contents/1/")
+        response = self.client.get("/api/v1/contents/1/")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def tearDown(self):

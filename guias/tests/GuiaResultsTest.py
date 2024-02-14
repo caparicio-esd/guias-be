@@ -14,13 +14,13 @@ class GuiaResultsTest(TestCase):
 
     def test_get_endpoints(self):
         #
-        response = self.client.get("/results/")
+        response = self.client.get("/api/v1/results/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), list)
         self.assertEqual(len(data), 6)
         #
-        response = self.client.get("/results/1/")
+        response = self.client.get("/api/v1/results/1/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), dict)
@@ -30,7 +30,7 @@ class GuiaResultsTest(TestCase):
     def test_post_endpoints(self):
         #
         request_data = {"title": "Diseño Test", "description": "Test", "priority": 1}
-        response = self.client.post("/results/", data=request_data)
+        response = self.client.post("/api/v1/results/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(type(data), dict)
@@ -40,7 +40,7 @@ class GuiaResultsTest(TestCase):
         self.assertEqual(data["priority"], 1)
         #
         request_data = {"title": "Diseño Test"}
-        response = self.client.post("/results/", data=request_data)
+        response = self.client.post("/api/v1/results/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(data["priority"], 1)
@@ -48,7 +48,7 @@ class GuiaResultsTest(TestCase):
 
     def test_put_endpoints(self):
         request_data = {"title": "Diseño Test Changed", "description": "Test Changed", "priority": 10}
-        response = self.client.put("/results/4/", data=request_data)
+        response = self.client.put("/api/v1/results/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 4)
@@ -58,7 +58,7 @@ class GuiaResultsTest(TestCase):
 
     def test_patch_endpoints(self):
         request_data = {"title": "Diseño Test Changed", "description": "Test Changed"}
-        response = self.client.patch("/results/3/", data=request_data)
+        response = self.client.patch("/api/v1/results/3/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 3)
@@ -68,10 +68,10 @@ class GuiaResultsTest(TestCase):
 
     def test_delete_endpoints(self):
         #
-        response = self.client.delete("/results/1/")
+        response = self.client.delete("/api/v1/results/1/")
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         #
-        response = self.client.get("/results/1/")
+        response = self.client.get("/api/v1/results/1/")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def tearDown(self):

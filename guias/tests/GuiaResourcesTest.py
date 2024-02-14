@@ -14,13 +14,13 @@ class GuiaResourcesTest(TestCase):
 
     def test_get_endpoints(self):
         #
-        response = self.client.get("/resources/")
+        response = self.client.get("/api/v1/resources/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), list)
         self.assertEqual(len(data), 5)
         #
-        response = self.client.get("/resources/1/")
+        response = self.client.get("/api/v1/resources/1/")
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(type(data), dict)
@@ -31,7 +31,7 @@ class GuiaResourcesTest(TestCase):
     def test_post_endpoints(self):
         #
         request_data = {"title": "Diseño Test", "description": "Test", "type": 1}
-        response = self.client.post("/resources/", data=request_data)
+        response = self.client.post("/api/v1/resources/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(type(data), dict)
@@ -41,14 +41,14 @@ class GuiaResourcesTest(TestCase):
         self.assertEqual(data["type"], 1)
         #
         request_data = {"title": "Diseño Test"}
-        response = self.client.post("/resources/", data=request_data)
+        response = self.client.post("/api/v1/resources/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(data["type"], ['This field is required.'])
 
     def test_put_endpoints(self):
         request_data = {"title": "Diseño Test Changed", "description": "Test Changed", "type": 1}
-        response = self.client.put("/resources/4/", data=request_data)
+        response = self.client.put("/api/v1/resources/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data["id"], 4)
@@ -58,17 +58,17 @@ class GuiaResourcesTest(TestCase):
 
     def test_patch_endpoints(self):
         request_data = {"title": "Diseño Test Changed", "description": "Test Changed"}
-        response = self.client.put("/resources/4/", data=request_data)
+        response = self.client.put("/api/v1/resources/4/", data=request_data)
         data = response.json()
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(data["type"],  ['This field is required.'])
 
     def test_delete_endpoints(self):
         #
-        response = self.client.delete("/resources/1/")
+        response = self.client.delete("/api/v1/resources/1/")
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         #
-        response = self.client.get("/resources/1/")
+        response = self.client.get("/api/v1/resources/1/")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def tearDown(self):

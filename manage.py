@@ -7,7 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
     # TODO wrap local settings or production settings based on env - python decouple
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'admin.settings_local')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings_local')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
